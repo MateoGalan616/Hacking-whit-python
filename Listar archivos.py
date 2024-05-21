@@ -6,7 +6,7 @@ sensitive_extensions = ['*.db', '*.sql', '*.key', '*.pem']
 # Función para listar archivos sensibles
 def list_sensitive_files(directory):
     sensitive_files = []
-    for root, dirs, files in os.walk(directory):
+    for root, dirs, files in os.walk('Hacking-whit-python'):
         for extension in sensitive_extensions:
             for filename in fnmatch.filter(files, extension):
                 sensitive_files.append(os.path.join(root, filename))
