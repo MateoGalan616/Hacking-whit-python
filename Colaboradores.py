@@ -1,9 +1,9 @@
 import os
 
-# Ruta del archivo
+
 archivo = 'colaboradores.txt'
 
-# Función para leer los colaboradores desde el archivo
+
 def leer_colaboradores():
     if not os.path.exists(archivo):
         return []
@@ -11,13 +11,13 @@ def leer_colaboradores():
         colaboradores = f.read().splitlines()
     return colaboradores
 
-# Función para mostrar los colaboradores
+
 def mostrar_colaboradores(num_colaboradores=5):
     colaboradores = leer_colaboradores()
     for i, colaborador in enumerate(colaboradores[:num_colaboradores], start=1):
         print(f"{i}. {colaborador}")
 
-# Función para agregar un nuevo colaborador
+
 def agregar_colaborador(nuevo_colaborador):
     colaboradores = leer_colaboradores()
     if len(colaboradores) >= 15:
@@ -32,7 +32,7 @@ def agregar_colaborador(nuevo_colaborador):
     else:
         print(f"El colaborador '{nuevo_colaborador}' ya está en la lista.")
 
-# Función principal
+
 def main():
     while True:
         print("\nMenú de opciones:")
@@ -60,6 +60,6 @@ def main():
         else:
             print("Opción no válida. Intente nuevamente.")
 
-# Ejecutar el script
+
 if __name__ == "__main__":
     main()
